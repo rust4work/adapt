@@ -1,5 +1,38 @@
+@font-face {
+  font-family: "myfonts";
+  src: url("fonts/TTLakes-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myfonts";
+  src: url("fonts/TTLakes-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myfonts";
+  src: url("fonts/TTLakes-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myfonts";
+  src: url("fonts/TTLakes-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .container {
+  font-family: "myfonts";
   width: 100%;
+  overflow: hidden;
 }
 .header {
   display: flex;
@@ -10,7 +43,10 @@
 }
 .header__item,
 .header__logo {
-  margin-left: 15px;
+  margin-left: 10px;
+}
+.header__divider {
+  margin: 0px 5px;
 }
 .header-button {
   border: none;
@@ -24,9 +60,10 @@
 }
 
 .main__title {
+  font-weight: 600;
   display: flex;
   align-items: center;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 .main__bar {
   height: 40px;
@@ -38,4 +75,51 @@
 .main__text {
   margin-left: 8px;
   font-size: 28px;
+}
+.main__scrollbar {
+  width: 100%;
+  height: 40px;
+  margin: 0px 10px;
+  gap: 5px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+.main__scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.main__scroll-item {
+  font-weight: 300;
+  opacity: 0.8;
+  width: 246px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: lightgrey;
+  border: none;
+  /* outline: 1px solid #41f6d7; */
+}
+.main__scroll-item :focus,
+.main__scroll-item :active {
+  border: 1px solid black;
+}
+.main__content {
+  font-size: 14px;
+  margin: 35px 15px;
+}
+.main__more {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+.main__img {
+  margin: 10px;
+  width: 100%;
+  max-width: 100%;
+}
+.main__img img {
+  width: 100%;
+  height: auto;
+  max-width: 5000px;
 }
