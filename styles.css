@@ -5,7 +5,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "TT Lakes";
+  font-family: "myfonts";
   src: url("fonts/TTLakes-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -79,7 +79,8 @@
 .main__scrollbar {
   width: 100%;
   height: 40px;
-  margin: 0px 10px;
+  padding: 0px 20px;
+
   gap: 5px;
   display: flex;
   overflow-x: auto;
@@ -96,16 +97,17 @@
   height: 40px;
   padding: 10px;
   font-size: 16px;
-  background-color: lightgrey;
   border: none;
-  /* outline: 1px solid #41f6d7; */
+  background-color: white;
 }
-.main__scroll-item :focus,
-.main__scroll-item :active {
-  border: 1px solid black;
+.main__scroll-item:focus,
+.main__scroll-item:active {
+  border: 2px solid #b8ffec;
+  border-radius: 10px;
 }
 .main__content {
   font-size: 14px;
+  font-weight: 300;
   margin: 35px 15px;
 }
 .main__more {
@@ -121,5 +123,4 @@
 .main__img img {
   width: 100%;
   height: auto;
-  max-width: 5000px;
 }
