@@ -33,6 +33,7 @@
   font-family: "myfonts";
   width: 100%;
   overflow: hidden;
+  background-color: #f8f8f8;
 }
 .header {
   display: flex;
@@ -44,6 +45,9 @@
 .header__item,
 .header__logo {
   margin-left: 10px;
+}
+.header__item-768 {
+  display: none;
 }
 .header__divider {
   margin: 0px 5px;
@@ -109,11 +113,22 @@
   font-size: 14px;
   font-weight: 300;
   margin: 35px 15px;
+  height: fit-content;
+}
+.main__content-extra {
+  display: none;
 }
 .main__more {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+}
+.main__more button {
+  border: none;
+  background-color: white;
+}
+.main__more button:active {
+  background-color: #b1bfbd22;
 }
 .main__img {
   margin: 10px;
@@ -123,4 +138,35 @@
 .main__img img {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 768px) {
+  .header__item-768 {
+    display: inline-block;
+  }
+  .header__logo {
+    margin-left: 50px;
+  }
+  .header__divider {
+    margin: 0px 5px 0px 10px;
+  }
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .main__content-extra {
+    display: inline;
+  }
+  .main__img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .main__img img {
+    border-radius: 10px;
+  }
+  .main__more {
+    grid-column: 1/1;
+  }
 }
