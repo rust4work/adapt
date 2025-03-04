@@ -63,7 +63,14 @@
   align-items: center;
 }
 
+.main {
+  margin-top: 50px;
+}
+.main__1120 {
+  display: none;
+}
 .main__title {
+  width: 100%;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -81,9 +88,9 @@
   font-size: 28px;
 }
 .main__scrollbar {
-  width: 100%;
+  width: auto;
   height: 40px;
-  padding: 0px 20px;
+  margin: 0px 20px;
 
   gap: 5px;
   display: flex;
@@ -113,9 +120,12 @@
   font-size: 14px;
   font-weight: 300;
   margin: 35px 15px;
-  height: fit-content;
+  height: auto;
 }
 .main__content-extra {
+  display: none;
+}
+.main__content-1120 {
   display: none;
 }
 .main__more {
@@ -140,7 +150,7 @@
   height: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1119px) {
   .header__item-768 {
     display: inline-block;
   }
@@ -151,11 +161,16 @@
     margin: 0px 5px 0px 10px;
   }
   .main__container {
+    margin: 10px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    column-gap: 20px;
   }
 
+  .main__content {
+    margin-bottom: 0px;
+    height: fit-content;
+  }
   .main__content-extra {
     display: inline;
   }
@@ -168,5 +183,61 @@
   }
   .main__more {
     grid-column: 1/1;
+    align-self: start;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+
+  .main__content-extra {
+    display: inline;
+  }
+  .main__content-1120 {
+    display: inline;
+  }
+  .button-1120 {
+    border: none;
+    background-color: white;
+  }
+  .button-1120:active {
+    background-color: #b1bfbd22;
+  }
+  .main__1120 {
+    display: flex;
+    gap: 20px;
+  }
+  .main__icons_1120 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .main__text {
+    flex-grow: 1;
+  }
+  .main__container {
+    margin: 10px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+  .main__content {
+    margin-bottom: 0px;
+    height: fit-content;
+    max-width: 600px;
+    font-size: 16px;
+  }
+  .main__img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .main__img img {
+    border-radius: 10px;
+  }
+  .main__more {
+    grid-column: 1/1;
+    align-self: start;
   }
 }
